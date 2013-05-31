@@ -3,6 +3,14 @@ require 'spec_helper'
 
 describe "Static pages" do
 
+
+
+ it "should have the right links on the layout" do
+    visit root_path
+    click_link "About"
+    page.should have_selector 'title', text: full_title('About Us')
+end
+
 subject { page }
 let(:base_title) { "Ruby on Rails Tutorial Sample App" }
   describe "Home page" do
