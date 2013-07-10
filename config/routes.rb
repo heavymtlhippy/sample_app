@@ -8,7 +8,7 @@
   match '/signout', to: 'sessions#destroy', via: :delete
   
   match '/about',   to: 'static_pages#About'
-  match '/contact', to: 'static_pages#Contact'
+  match '/contact', to: 'static_pages#Contact' #these MUST match the View file name EXACTLY
   match '/help',    to: 'static_pages#help'
  
   
